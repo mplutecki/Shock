@@ -9,7 +9,7 @@ class MockNIOHttpServer: MockNIOBaseServer, MockHttpServer {
     
     private let responseFactory: ResponseFactory
     private var httpHandler: MockNIOHTTPHandler?
-    private var router = MockNIOHTTPRouter()
+    private let router = MockNIOHTTPRouter()
     private var middleware = [Middleware]()
     private var routeMiddleware: MockRoutesMiddleware?
     var notFoundHandler: HandlerClosure?
